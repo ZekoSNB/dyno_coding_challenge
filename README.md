@@ -6,21 +6,21 @@ Wish me luck :)
 
 ### List of projects: 
 - **Beginner level**
-  - [] Color Game
-  - [] Number Guessing
+  - [ ] Color Game
+  - [ ] Number Guessing
   - [ ] Text-based Adventure Game
-  - [] Dice Rolling Simulator
-  - [] Hangman
-  - [] Contact Book
-  - [] Email Slicer
-  - [] Age Calculator
+  - [ ] Dice Rolling Simulator
+  - [ ] Hangman
+  - [ ] Contact Book
+  - [ ] Email Slicer
+  - [ ] Age Calculator
   - [ ] Desktop Notifier App
   - [ ] Python Story Generator
   - [ ] YouTube video downloader
   - [ ] Python Website Blocker
   - [ ] Spin a Yarn
   - [ ] What's the word?
-  - [] Rock, Paper, Scissors
+  - [ ] Rock, Paper, Scissors
   - [ ] Leap it!
   - [ ] Find out, Fibonacci!  
 
@@ -55,7 +55,7 @@ Wish me luck :)
 
 
 # ABOUT 
-Date started - 19th may 2022  
-Projects done - 8/42
+- Date started - 19th may 2022  
+- Projects done - 8/42
 
 > You can check you my [other projects](https://github.com/ZekoSNB?tab=repositories) if you are interested
