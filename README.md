@@ -56,7 +56,7 @@
 
 
 # ABOUT 
-- Date started - 19th may 2022  
-- Projects done - 8/42
+- Date started - 31st August 2023  
+- Projects done - 0/42
 
 > You can check you my [other projects](https://github.com/ZekoSNB?tab=repositories) if you are interested
