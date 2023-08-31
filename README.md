@@ -1,8 +1,9 @@
-# dynamic_coding_challenge
-Python challenge  
-I challenged myself to code as many projects as possible from [this post](https://www.instagram.com/p/Cagfz6WlEMZ/) on Instagram  
-You can download files from [*archives*](/archives) folder  
-Wish me luck :)  
+# Dynamic Coding Challenge
+## Python challenge  
+- I saw this challenge in my [friend's repository](https://github.com/yungcypo/dynamic_coding_challenge) and I'll try this on my own 
+- [Instagram post](https://www.instagram.com/p/Cagfz6WlEMZ/) with the challenges  
+- You can download files from [*archives*](/archives) folder  
+## Wish me luck :)  
 
 ### List of projects: 
 - **Beginner level**
