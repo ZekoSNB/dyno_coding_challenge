@@ -1,4 +1,4 @@
-import csv
+import csv, sys
 from Keyboard import Keyboard
 
 
@@ -6,8 +6,15 @@ from Keyboard import Keyboard
 class Book():
     def __init__(self) -> None:
         self.dictionary = {}
-        self.keys = Keyboard(self.add, self.remove, self.exit)
+        self.keys = Keyboard(self.add, self.remove, self.exit, self.help)
+        self.saved_changes = True
     
+    def save_file(self):
+        pass
+
+    def help(self):
+        print("Type add to add people \n Type save to save to memory \n Type quit/exit to exit the script \n Type remove to Remove people from the list")
+
     def save(self):
         return_state = False
         while not return_state:
@@ -25,7 +32,17 @@ class Book():
             print('please enter y/yes or n/no')
             return False
     def exit(self):
-        pass
+        if self.saved_changes:
+            save_before_exit = input('Do you want to save before exiting (yes/no): ')
+            if save_before_exit == 'yes' or save_before_exit == 'y':
+                self.save_file()
+                sys.exit()
+            elif save_before_exit == 'no' or save_before_exit == 'n':
+                sys.exit()
+            else:
+                self.exit()
+        else:
+            sys.exit()
 
     def remove(self):
         print('remove')
@@ -34,10 +51,10 @@ class Book():
         name = input('Please etner a name: ')
         phone_number = input('Please, enter a phone number: ')
         print(f'The name of the person is {name} \n The contact for {name} is {phone_number}')
+        self.saved_changes = False
         self.save() 
 
     def start(self):
-        # print("Press key -h for help")
         while True:
             self.keys.key_check()
             

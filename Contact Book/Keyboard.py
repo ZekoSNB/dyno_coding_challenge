@@ -1,10 +1,11 @@
 import sys
 
 class Keyboard():
-    def __init__(self, add, remove, exit) -> None:
+    def __init__(self, add, remove, exit, help) -> None:
         self.add = add
         self.exit = exit
         self.remove = remove
+        self.help = help
         super().__init__()
 
     def key_check(self):
@@ -13,16 +14,20 @@ class Keyboard():
             case 'add':
                 self.add()
             case 'quit':
-                sys.exit()
+                self.exit()
             case 'q':
-                sys.exit()
+                self.exit()
             case 'exit':
-                sys.exit()
+                self.exit()
             case 'remove':
                 self.remove()
+            case 'help':
+                self.help()
+            case '--help':
+                self.help()
+            case '--h':
+                self.help()
             case 'h':
-                a = input("asdf= ")
-                print(a)
-                return 'neviem'
+                self.help()
             case '-h':
-                print("Type add to add people \n Type save to save to memory \n Type quit/exit to exit the script \n Type remove to Remove people from the list")
+                self.help()
