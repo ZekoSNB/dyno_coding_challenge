@@ -1,45 +1,45 @@
 import csv
+from Keyboard import Keyboard
 
 
 
 class Book():
     def __init__(self) -> None:
         self.dictionary = {}
-        # print(str(Book) + ' initialized')
+        self.keys = Keyboard(self.add, self.remove, self.exit)
+    
+    def save(self):
+        return_state = False
+        while not return_state:
+            save = input('Is this correct and do you want to save this ? (y/yes or n/no): ')
+            return_state = self.valid(save)
 
-    def key_check(self):
-        valid_inp = False
-        self.key_press = input("Enter a key -h for help: ")
-        print(self.key_press.lower)
-        match self.key_press.lower():
-            case 'add':
-                name = input('Please etner a name: ')
-                phone_number = input('Please, enter a phone number: ')
-                print(f'The name of the person is {name} \n The contact for {name} is {phone_number}')
-                while not valid_inp:
-                    save = input('Is this correct and do you want to save this ? (y/yes or n/no): ')
-                    if save == 'y' or save == 'yes':
-                        print('ok, saved')
-                        valid_inp = True
-                    elif save == 'n' or save == 'no':
-                        print('ok, not saving this time')
-                        valid_inp = True
-                    else:
-                        print('please enter y/yes or n/no')
-                        valid_inp = True
-                
-            case 'h':
-                a = input("asdf= ")
-                print(a)
-                return 'neviem'
-            case '-h':
-                print("Type add to add people \n Type save to save to memory \n Type quit/exit to exit the script \n Type remove to Remove people from the list")
+    def valid(self, inp):
+        if inp == 'y' or inp == 'yes':
+            print('ok, saved')
+            return True
+        elif inp == 'n' or inp == 'no':
+            print('ok, not saving this time')
+            return True
+        else:
+            print('please enter y/yes or n/no')
+            return False
+    def exit(self):
+        pass
 
+    def remove(self):
+        print('remove')
+        
+    def add(self):
+        name = input('Please etner a name: ')
+        phone_number = input('Please, enter a phone number: ')
+        print(f'The name of the person is {name} \n The contact for {name} is {phone_number}')
+        self.save() 
 
     def start(self):
         # print("Press key -h for help")
         while True:
-            self.key_check()
+            self.keys.key_check()
             
 
 if __name__ == '__main__':
