@@ -4,13 +4,8 @@ from file_work import Files
 class Keyboard(Files):
     def __init__(self, help, exit) -> None:
         super().__init__
-        # self.add = add
         self.exit = exit
-        # self.remove = remove
         self.help = help
-        # self.save_file = save
-        # self.show = show
-        
         os.system('clear')
         super().__init__()
 
