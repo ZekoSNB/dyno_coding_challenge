@@ -1,13 +1,13 @@
 import os
-from file_work import Files
 
-class Keyboard(Files):
-    def __init__(self, help, exit) -> None:
-        super().__init__
-        self.exit = exit
-        self.help = help
-        os.system('clear')
-        super().__init__()
+class Keyboard():
+    def __init__(self, show, save_file,add, remove, helpp, exiit) -> None:
+        self.show = show
+        self.exit = exiit
+        self.save_file = save_file
+        self.add = add
+        self.remove = remove
+        self.help = helpp
 
     def key_check(self):
         self.key_press = input("Enter a key -h for help: ")

@@ -1,4 +1,4 @@
-import csv, sys
+import os, sys
 from Keyboard import Keyboard
 from file_work import Files
 
@@ -7,14 +7,12 @@ from file_work import Files
     - [x] Removing user
     - [x] User list
 '''
-class Book():
+class Book:
     def __init__(self) -> None:
-        # self.dictionary = []
-        # self.keys = Keyboard(self.add, self.remove, self.exit, self.help, self.save_file, self.show)
-        self.keys = Keyboard(self.help, self.exit)
-        # self.file = Files()
-        self.saved_changes = True
-        # self.read_file()
+        os.system('clear')
+        self.file = Files()
+        self.keys = Keyboard(self.file.show, self.file.save_file, self.file.add, self.file.remove, self.help, self.exit)
+        
     
 
     def help(self):
@@ -35,10 +33,10 @@ class Book():
             ret_list = self.valid(sure_exit)
 
         if ret_list[1]:
-            if not self.saved_changes:
+            if not self.file.saved_changes:
                 save_before_exit = input('Do you want to save before exiting (yes/no): ')
                 if save_before_exit == 'yes' or save_before_exit == 'y':
-                    self.save_file()
+                    self.file.save_file()
                     sys.exit()
                 elif save_before_exit == 'no' or save_before_exit == 'n':
                     sys.exit()

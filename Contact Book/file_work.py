@@ -1,11 +1,9 @@
 import csv
-import sys
-import os
-
 
 class Files():
     def __init__(self) -> None:
         self.dictionary = []
+        self.saved_changes = True
         self.read_file()
 
     def valid(self, inp):
@@ -66,8 +64,7 @@ class Files():
         return_state = False
 
         while not return_state:
-            save = input(
-                'Is it correct and do you want to save this ? (y/yes or n/no): ')
+            save = input('Is it correct and do you want to save this ? (y/yes or n/no): ')
             return_list = self.valid(save)
             return_state = return_list[0]
 
@@ -91,7 +88,9 @@ class Files():
         with open('files/user.csv', 'w') as data:
             writer_obj = csv.writer(data)
             for i in self.dictionary:
-                print(i)
                 writer_obj.writerow(i)
             data.close()
             self.saved_changes = True
+    
+    def get_saved_changes(self):
+        return self.saved_changes
