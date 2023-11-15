@@ -12,9 +12,9 @@
   - [ ] Text-based Adventure Game
   - [ ] Dice Rolling Simulator
   - [ ] Hangman
-  - [ ] Contact Book
+  - [x] Contact Book
   - [ ] Email Slicer
-  - [ ] Age Calculator
+  - [x] Age Calculator
   - [ ] Desktop Notifier App
   - [ ] Python Story Generator
   - [ ] YouTube video downloader
